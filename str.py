@@ -1,12 +1,8 @@
-s = input()
+N = int(input())
+r = 'зайка'
+result = 0
 
-result = 'NO'
-
-for i in range(int(len(s) / 2)):
-    if s[i] == s[len(s) - 1 - i]:
-        result = 'YES'
-    else:
-        result = 'NO'
-        break
+for i in range(N):
+    result += input().count(r)
 
 print(result)
