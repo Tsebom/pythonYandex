@@ -1,8 +1,6 @@
-N = int(input())
-r = 'зайка'
-result = 0
+N = input()
+spt = N.split(' ')
 
-for i in range(N):
-    result += input().count(r)
+result = int(spt[0]) + int(spt[1])
 
 print(result)
