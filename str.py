@@ -1,10 +1,12 @@
 s = input()
 
-result = ''
+result = 'NO'
 
-if len(s) % 2 == 0 and s[:int(len(s)/2)] == s[int(len(s)/2):][::-1]:
-    result = "YES"
-else:
-    result = "NO"
+for i in range(int(len(s) / 2)):
+    if s[i] == s[len(s) - 1 - i]:
+        result = 'YES'
+    else:
+        result = 'NO'
+        break
 
 print(result)
