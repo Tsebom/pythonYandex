@@ -1,14 +1,15 @@
-N = input()
-
 arr = []
 
-for i in range(int(N)):
-    n = input().find('зайка')
-
-    if n != -1:
-        arr.append(n + 1)
+while True:
+    n = input()
+    if n == '':
+        break
+    elif n.startswith('#'):
+        continue
+    elif n.count('#'):
+        arr.append(n.split('#')[0])
     else:
-        arr.append('Заек нет =(')
+        arr.append(n)
 
 for i in range(len(arr)):
     print(arr[i])
